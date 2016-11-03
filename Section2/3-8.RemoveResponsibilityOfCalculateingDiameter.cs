@@ -22,7 +22,7 @@ namespace Section2 {
         }
 
         private WheelData Wheel { get; }
-        private int Chainring { get; }
+        private int Chainring { get;
         private int Cog { get; }
 
         public Gear(int cahinring, int cog, int rim, int tire)

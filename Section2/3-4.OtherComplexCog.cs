@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Section2 {
     class Gear {
+        private int Cog { get; }
+        private bool Foo { get; }
+        private double BarAdjustment { get; }
+        private double BazAdjustment { get; }
         private int Chainring {
             get {
                 return this.Cog * (this.Foo ? BarAdjustment : BazAdjustment));
             }
          }
-        private int Cog { get; }
-        private bool Foo { get; }
-        private double BarAdjustment { get; }
-        private double BazAdjustment { get; }
     }
 }
