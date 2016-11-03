@@ -33,6 +33,7 @@ namespace Section2 {
         public double Diameters() {
             return this.Wheels.Aggregate(
                 0.0,
+                //(sum, wheel) => sum + (wheel.Rim + wheel.Tire * 2.0)
                 (sum, wheel) => sum + Diameter(wheel));
         }
 
