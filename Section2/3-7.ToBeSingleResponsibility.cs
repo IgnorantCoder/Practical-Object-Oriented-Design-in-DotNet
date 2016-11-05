@@ -48,7 +48,7 @@ namespace Section2 {
         private int Rim { get; }
         private int Tire { get; }
 
-        public Gear(int cahinring, int cog, int rim, int tire)
+        public Gear(int chainring, int cog, int rim, int tire)
         {
             this.Chainring = chainring;
             this.Cog = cog;

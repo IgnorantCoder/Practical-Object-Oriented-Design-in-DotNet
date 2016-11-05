@@ -31,6 +31,10 @@ namespace Section2 {
     }
 
     class Program {
+        /// <summary>
+        ///   The main entry point for the application
+        /// </summary>
+        [STAThread]
         static void Main(string[] args) {
             System.Console.WriteLine(new Gear(52, 11, 26, 1.5).GearInches()); //137.090909090909
             System.Console.WriteLine(new Gear(52, 11, 24, 1.25).GearInches()); //125.272727272727

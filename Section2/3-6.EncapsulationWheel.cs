@@ -32,9 +32,9 @@ namespace Section2 {
 
         public double Diameters() {
             return this.Wheels.Aggregate(
-                0.0,
-                //(sum, cell) => sum + (cell[0] + cell[1] * 2)
-                (sum, wheel) => sum + (wheel.Rim + wheel.Tire * 2.0));
+                0,
+                (sum, wheel) =>
+            )
         }
     }
 }
