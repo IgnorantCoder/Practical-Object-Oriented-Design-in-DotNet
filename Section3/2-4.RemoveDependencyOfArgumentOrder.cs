@@ -30,14 +30,9 @@ namespace Section2
 
     class Gear
     {
-        private WheelData Wheel { get; }
         private double Chainring { get; }
         private double Cog { get; }
-
-        public Gear(double chainring, double cog)
-            : this(chainring, cog, null)
-        {
-        }
+        private WheelData Wheel { get; }
 
         public Gear(double chainring, double cog, WheelData wheel)
         {
@@ -46,14 +41,14 @@ namespace Section2
             this.Wheel = wheel;
         }
 
-        public double Ratio()
-        {
-            return this.Chainring / this.Cog;
-        }
-
         public double GearInches()
         {
             return this.Ratio() * this.Wheel.Diameter();
+        }
+
+        public double Ratio()
+        {
+            return this.Chainring / this.Cog;
         }
     }
 
@@ -65,10 +60,9 @@ namespace Section2
         [STAThread]
         public static void Main(string[] args)
         {
-            var wheel = new WheelData(26, 1.5);
-            System.Console.WriteLine(wheel.Circumference()); //91.106186954104
-            System.Console.WriteLine(new Gear(51, 11, wheel).GearInches()); //137.090909090909
-            System.Console.WriteLine(new Gear(51, 11).Ratio()); //4.72727272727273
+            var wheeldata = new WheelData(rim: 26, tire: 1.5);
+            var gear = new Gear(chainring: 52, cog: 11, wheel: wheeldata);
+            System.Console.WriteLine(gear.GearInches());
         }
     }
 }
